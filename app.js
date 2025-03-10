@@ -16,10 +16,21 @@ function addAmigo(){
     if(listaAmigos == ""){
         alert('Este campo no puede estar vacio');
     }if(amigos.includes(listaAmigos)){
-        alert(`El amigo:${listaAmigos} ya esta incluido`)
+        alert(`El amigo: ${listaAmigos} ya esta incluido`)
     }else{
         amigos.push(listaAmigos)
         alert('El amigo se ha agregado');
         document.getElementById('amigo').value = '';//limpiamos la caja de texto
     }
+}
+//Crear funcion para desplegar lo que vayamos agregando
+/*notas
+Método document.createElement() 
+    Crea un elemento HTML específico por su tagName.
+    Si el tagName no se reconoce, crea un HTMLUnknownElement.
+*/
+function listDeploy(){
+    let lista = document.querySelector('ul')
+    let nombre = document.createElement('ul')
+    nombre.textContent = 'amigos'
 }
