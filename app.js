@@ -21,6 +21,7 @@ function addAmigo(){
         amigos.push(listaAmigos)
         alert('El amigo se ha agregado');
         document.getElementById('amigo').value = '';//limpiamos la caja de texto
+        listDeploy();
     }
 }
 //Crear funcion para desplegar lo que vayamos agregando
@@ -30,7 +31,10 @@ Método document.createElement()
     Si el tagName no se reconoce, crea un HTMLUnknownElement.
 */
 function listDeploy(){
-    let lista = document.querySelector('ul')
-    let nombre = document.createElement('ul')
-    nombre.textContent = 'amigos'
+    let lista = document.querySelector('ul');// obtener la etiqueta del html donde
+                                            // queremos poner los nombres
+    for(let x = 0 ; x<=amigos.length; x++){
+    let nombres = document.createElement('li');
+        nombres.textContent = amigos[x];
+    }
 }
