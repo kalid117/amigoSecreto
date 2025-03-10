@@ -32,8 +32,7 @@ Método document.createElement()
     Si el tagName no se reconoce, crea un HTMLUnknownElement.
 */
 function listDeploy(){
-    let lista = document.querySelector('ul');// obtener la etiqueta del html donde
-                                            // queremos poner los 
+    let lista = document.querySelector('ul');// obtener la etiqueta del html donde queremos ponerlos
     lista.innerHTML = ''; // se debe limpiar la lista porque sino agrega los elementos anteriores
                             // es decir va duplicando campos pasados
                             
