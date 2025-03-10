@@ -15,6 +15,7 @@ function addAmigo(){
     let listaAmigos = document.getElementById('amigo').value;
     if(listaAmigos == ""){
         alert('Este campo no puede estar vacio');
+
     }if(amigos.includes(listaAmigos)){
         alert(`El amigo: ${listaAmigos} ya esta incluido`)
     }else{
@@ -45,9 +46,13 @@ function listDeploy(){
 }
 
 function sortearAmigo(){
-    let ganador = 0
-    for(let y = 0 ; y<amigos.length; y++){ 
-        
-    }
+    let z = Math.floor(Math.random()*amigos.length); // con esto se crea un numero aleatorio
+                                                    // dentro del rango del array
+
+    alert(amigos[z]); // con un numero que este dentro del rango se selecciona el indice
+                    // que le corresponde dentro del array amigos[] el cual 
+                    //nos devuelve el valor que corresponde a dicho valo dentro del array
+                    // seleccionado asi nuestro amigo sorteado.
+
     
 }
