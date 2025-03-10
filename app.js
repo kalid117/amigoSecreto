@@ -9,3 +9,16 @@ Visualizar la lista: Los nombres ingresados aparecerán en una lista debajo del 
 Sorteo aleatorio: Al hacer clic en el botón "Sortear Amigo", 
 se seleccionará aleatoriamente un nombre de la lista y se mostrará en la página.
 */
+
+function addAmigo(){
+    let amigos = [];
+    let listaAmigos = document.getElementById('amigo');
+    if(listaAmigos == ""){
+        alert('Este campo no puede estar vacio');
+    }if(amigos.includes(listaAmigos)){
+        alert(`El amigo:${listaAmigos} ya esta incluido`)
+    }else{
+        amigos.push(listaAmigos)
+        alert('El amigo se ha agregado');
+    }
+}
