@@ -21,6 +21,7 @@ function addAmigo(){
         amigos.push(listaAmigos)
         alert('El amigo se ha agregado');
         document.getElementById('amigo').value = '';//limpiamos la caja de texto
+       
         listDeploy();
     }
 }
@@ -32,9 +33,22 @@ Método document.createElement()
 */
 function listDeploy(){
     let lista = document.querySelector('ul');// obtener la etiqueta del html donde
-                                            // queremos poner los nombres
-    for(let x = 0 ; x<=amigos.length; x++){
+                                            // queremos poner los 
+    lista.innerHTML = ''; // se debe limpiar la lista porque sino agrega los elementos anteriores
+                            // es decir va duplicando campos pasados
+                            
+    for(let x = 0 ; x<amigos.length; x++){
     let nombres = document.createElement('li');
         nombres.textContent = amigos[x];
+        lista.appendChild(nombres);
+        
     }
+}
+
+function sortearAmigo(){
+    let ganador = 0
+    for(let y = 0 ; y<amigos.length; y++){ 
+        
+    }
+    
 }
