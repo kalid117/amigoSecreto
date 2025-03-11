@@ -38,9 +38,9 @@ function listDeploy(){
                             // es decir va duplicando campos pasados
                             
     for(let x = 0 ; x<amigos.length; x++){
-    let nombres = document.createElement('li');
+    let nombres = document.createElement('li'); // creamos un elemntos del tipo lis
         nombres.textContent = amigos[x];
-        lista.appendChild(nombres);
+        lista.appendChild(nombres); // agregamso con appendchild el nombre del amigo
         
     }
 }
@@ -49,10 +49,13 @@ function sortearAmigo(){
     let z = Math.floor(Math.random()*amigos.length); // con esto se crea un numero aleatorio
                                                     // dentro del rango del array
 
-    alert(amigos[z]); // con un numero que este dentro del rango se selecciona el indice
+    //alert(amigos[z]); // con un numero que este dentro del rango se selecciona el indice
                     // que le corresponde dentro del array amigos[] el cual 
                     //nos devuelve el valor que corresponde a dicho valo dentro del array
                     // seleccionado asi nuestro amigo sorteado.
-
-    
+    let seleccion = document.getElementById('resultado')
+    seleccion.innerHTML = ''; // agregar para evitar que este el seleccionado anterior
+    let amigoSeleccionado = document.createElement('li');
+    amigoSeleccionado.textContent = `El amigo secreto es: ${amigos[z]}`;
+    seleccion.appendChild(amigoSeleccionado);
 }
