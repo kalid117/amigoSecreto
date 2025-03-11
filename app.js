@@ -70,4 +70,5 @@ function reboot(){
     lista.innerHTML = '';
     seleccion = document.getElementById('resultado');
     seleccion.innerHTML = '';
+    alert('Juego reiniciado');
 }
