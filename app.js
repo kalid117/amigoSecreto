@@ -15,6 +15,8 @@ function addAmigo(){
     let listaAmigos = document.getElementById('amigo').value;
     if(listaAmigos == ""){
         alert('Este campo no puede estar vacio');
+        return 0; // esto evita que mande al array un campo con espacio vacios
+                 // envia nada a la funcion
 
     }if(amigos.includes(listaAmigos)){
         alert(`El amigo: ${listaAmigos} ya esta incluido`)
@@ -58,4 +60,9 @@ function sortearAmigo(){
     let amigoSeleccionado = document.createElement('li');
     amigoSeleccionado.textContent = `El amigo secreto es: ${amigos[z]}`;
     seleccion.appendChild(amigoSeleccionado);
+}
+
+function reboot(){
+    amigos = [];
+    
 }
