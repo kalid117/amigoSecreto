@@ -19,7 +19,7 @@ function addAmigo(){
                  // envia nada a la funcion
 
     }if(amigos.includes(listaAmigos)){
-        alert(`El amigo: ${listaAmigos} ya esta incluido`)
+        alert(`El amigo: ${listaAmigos} ya esta incluido`);
     }else{
         amigos.push(listaAmigos)
         alert('El amigo se ha agregado');
@@ -64,5 +64,10 @@ function sortearAmigo(){
 
 function reboot(){
     amigos = [];
-    
+    listaAmigos = document.getElementById('amigo');
+    listaAmigos.value = '';
+    lista = document.getElementById('listaAmigos');
+    lista.innerHTML = '';
+    seleccion = document.getElementById('resultado');
+    seleccion.innerHTML = '';
 }
